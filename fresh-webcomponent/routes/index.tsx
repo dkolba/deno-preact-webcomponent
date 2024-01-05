@@ -1,6 +1,7 @@
 import { useSignal } from "@preact/signals";
 import { Head } from "$fresh/runtime.ts";
 import Counter from "../islands/Counter.tsx";
+import { JSX } from "preact";
 
 declare module "preact" {
   namespace JSX {
@@ -10,7 +11,7 @@ declare module "preact" {
   }
 }
 
-interface StopWatchAttributes extends preact.JSX.HTMLAttributes<HTMLElement> {
+interface StopWatchAttributes extends JSX.HTMLAttributes<HTMLElement> {
   kind?: string;
 }
 
